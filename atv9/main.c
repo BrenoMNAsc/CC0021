@@ -9,8 +9,8 @@ MPI_Init(&argc, &argv);
 MPI_Comm_size(MPI_COMM_WORLD, &numtasks);
 MPI_Comm_rank(MPI_COMM_WORLD,&taskid);
 MPI_Get_processor_name(hostname, &len);
-printf ("Hello from task %d on %s!\n", taskid, hostname);
+printf ("ID task %d no %s!\n", taskid, hostname);
 if (taskid == MASTER)
-printf("MASTER: Number of MPI tasks is: %d\n",numtasks);
+printf("MASTER: numero da MPI task é: %d\n",numtasks);
 MPI_Finalize();
 }
